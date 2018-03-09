@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("../fonts/HelveticaNeue.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* font-family: "Helvetica Neue"; */
+}
+
+/* page */
+.page {
+    
+}
+
+.page__header {
+    width: 100%;
+}
+
+/* page end */
+
+/* header */ 
+
+/* header end */
+.header {
+    height: 3.25em;
+    border-bottom: 1px solid #eeb6e5;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 960px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* combined-shape */
+.combined-shape {
+    margin-right: 0.5em; 
+    width: 1.85em; 
+    position: relative;
+}
+
+.combined-shape__line {
+    display: inline-block;
+    width: 1px;
+    height: 2.25em;
+    background-color: #d135aa;
+    transform-origin: bottom right;
+    transform: rotate(45deg);
+    margin-left: 0.21em;
+}
+
+.combined-shape::before {
+    content: "\003c";
+}
+
+.combined-shape::after {
+    content: "\003e";
+    right: 0%;
+}
+
+.combined-shape::before, .combined-shape::after {
+    color: #d135aa;
+    font-size: 1em;
+    position: absolute;
+    top: 30%;
+}
+/* combined-shape end */
+
+/* test-task */
+
+.test-task {
+    color: #5a1094;
+    font-family: inherit;
+}
+/* test-task end */
+
+/* cart */
+.cart {
+    margin-left: auto;
+    position: relative;
+    width: 4.5em;
+    line-height: 2.4em;
+    color: #ff2b81;
+    font-size: 0.9em;
+}
+.cart__amount {
+    display: inline-block;
+    line-height: 1em;
+    text-align: center;
+    width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    background-color: #ff2b81;
+    font-size: 0.9em;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.cart__amount::after {
+    content: "";
+    z-index: -1;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    height: 1.5em;
+    width:2.5em;
+    background-image: url('../img/cart.png');
+    background-repeat: no-repeat;
+}
+/* cart end */
