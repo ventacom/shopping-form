@@ -22,8 +22,52 @@
         </div>
         <div class="page__main">
             <form action="#" class="form">
-
-    
+                <div class="form__breadcrumbs breadcrumbs">
+                    <a href="#" class="breadcrumb__item">Shipping</a>
+                    <a href="#" class="breadcrumb__item">Billing</a>
+                    <a href="#" class="breadcrumb__item">Payment</a>
+                </div>
+                <div class="form__section form__section--shipping">
+                    <h1 class="form__header">Shipping info</h1>
+                    <h2 class="form__subheader">Recipient</h2>
+                    <input type="text" name="name-shipping" placeholder="Full Name" class="form__input form__input--name-shipping" required>
+                    <input type="tel" name="phone" placeholder="Daytime Phone" class="form__input form__input--phone" required>
+                    <p class="form__note">For delivery question only</p>
+                    <div class="form__subheader">Address</div>
+                    <input type="text" name="street" placeholder="Street Address" class="form__input form__input--street-address-shipping" required>
+                    <input type="text" name="apt" placeholder="Apt, Suite, Bldg, Gate Code. (optional)" class="form__input form__input--apt-shipping" required>
+                    <input type="text" name="city" placeholder="City" class="form__input form__input--city-shipping" required>
+                    <select name="country" class="form__input form__select form__input--country-shipping" required></select>
+                    <input type="text" placeholder="ZIP" name="zip" class="form__input form__input--zip-shipping">
+                    <a href="#" class="form__button">Continue</a>
+                </div>
+                <div class="form__section form__section--billing">
+                    <h1 class="form__header">Billing Information</h1>
+                    <a href="#" class="form__same-as-shipping">Same as shipping</a>
+                    <h2 class="form_subheader">Billing Contact</h2>
+                    <input type="text" name="name-billing" placeholder="Full Name" class="form__input form__input--name-billing" required>
+                    <input type="email" name="email" placeholder="Email Address" class="form__input form__input--email" required>
+                    <h2 class="form__subheader">Billing Address</h2>
+                    <input type="text" name="street" placeholder="Street Address" class="form__input form__input--street-address-billing" required>
+                    <input type="text" name="apt" placeholder="Apt, Suite, Bldg, Gate Code. (optional)" class="form__input form__input--apt-billing" required>
+                    <input type="text" name="city" placeholder="City" class="form__input form__input--city-billing" required>
+                    <select name="country" class="form__input form__select form__input--country-billing" required></select>
+                    <input type="text" placeholder="ZIP" name="zip" class="form__input form__input--zip-billing">
+                    <a href="#" class="form__button">Continue</a>
+                </div>
+                <div class="form__section form__section--payment">
+                    <div class="form__header">Payment</div>
+                    <div class="form__secure-payment">This is a secure 128-bit SSL encrypted payment</div>
+                    <h2 class="form__subheader">Cardholder Name</h2>
+                    <input type="text" name="card-holder-name" placeholder="Name as it appears on your card" class="form__input form__input--card-holder-name" required>
+                    <div class="form__subheader">Card Number</div>
+                    <input type="text" pattern="^[0-9]{4}\s[0-9]{4}\s[0-9]{4}\s[0-9]{4}$" name="cardnumber" placeholder="XXXX XXXX XXXX XXXX XXXX" class="form__input form__input--cardnumber" required>
+                    <h2 class="form__subheader">Expire Date</h2>
+                    <input type="text" name="card-date" pattern="^[0-1][0-2]/[0-9][0-9]$" placeholder="MM/YY" class="form__input form__input--card-date" required>
+                    <h2 class="form__subheader">Security Code</h2>
+                    <input type="text" pattern="^[0-9]{3,4}$" name="security-code" class="form__input form__input--security-code" required>
+                </div>
+                <a href="#" class="form__button form__submit">Pay securely</a>
             </form>
         </div>
     </div>
