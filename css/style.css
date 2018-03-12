@@ -28,8 +28,6 @@ body {
 /* page end */
 
 /* header */ 
-
-/* header end */
 .header {
     height: 3.25em;
     border-bottom: 1px solid #eeb6e5;
@@ -44,6 +42,9 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
+
+/* header end */
+
 /* combined-shape */
 .combined-shape {
     margin-right: 0.5em; 
@@ -123,3 +124,13 @@ body {
     background-repeat: no-repeat;
 }
 /* cart end */
+
+/* form */
+
+.form__section {
+    display: none;
+}
+
+.form__section--shipping {
+    display: block;
+}
