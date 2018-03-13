@@ -171,6 +171,10 @@ window.addEventListener('load', function () {
             e.target.className = "form__input form__input--cardnumber form__input--Visa";
         }
 
+        else {
+            e.target.className = "form__input form__input--cardnumber";
+        }
+
     });
 
 
