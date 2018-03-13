@@ -561,7 +561,7 @@
                     <input type="text" name="card-holder-name" placeholder="Name as it appears on your card" class="form__input form__input--card-holder-name" required>
                     <div class="form__subheader">Card Number</div>
                     <div class="error"></div>
-                    <input type="text" pattern="^[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}\s?[0-9]{4}$" name="cardnumber" placeholder="XXXX XXXX XXXX XXXX XXXX" class="form__input form__input--cardnumber" required>
+                    <input type="text" pattern="^[0-9]{4}\s?[0-9]{3,4}\s?[0-9]{0,4}\s?[0-9]{0,4}$" name="cardnumber" placeholder="XXXX XXXX XXXX XXXX XXXX" class="form__input form__input--cardnumber" required>
                     <h2 class="form__subheader">Expire Date</h2>
                     <div class="error"></div>
                     <input type="text" name="card-date" pattern="^[0-1][0-2]/[0-9][0-9]$" placeholder="MM/YY" class="form__input form__input--card-date" required>

@@ -134,3 +134,15 @@ body {
 .form__section--shipping {
     display: block;
 }
+
+.form__input--Visa {
+    background-image: url("../img/visa.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.form__input--Mastercard {
+    background-image: url("../img/mastercard.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+}

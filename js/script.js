@@ -4,6 +4,7 @@ window.addEventListener('load', function () {
     var form = document.querySelector("form");
     var submitButton = document.querySelector(".form__submit");
     var continueButtons = document.querySelectorAll(".form__button--continue");
+    var cardNumber =  document.querySelector(".form__input--cardnumber");
 
     var fields = form.querySelectorAll('.form__input');
 
@@ -22,6 +23,8 @@ window.addEventListener('load', function () {
         }
         form.submit();
     });
+
+    // Continue next step
 
     continueButtons.forEach(button => { 
         button.addEventListener('click', (e) => {
@@ -44,6 +47,8 @@ window.addEventListener('load', function () {
         } );
         
     });
+
+    // Validation
 
     fields.forEach( el => { 
 
@@ -150,6 +155,23 @@ window.addEventListener('load', function () {
         error.classList.add("active");
         error.innerHTML = message;
     }
+
+    // Detect card
+
+    cardNumber.addEventListener('input', e => {
+        var number = e.target.value;
+
+        number = number.split(" ").join("");
+
+        if (/^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$/.test(number)) {
+            e.target.className = "form__input form__input--cardnumber form__input--Mastercard";
+        } 
+
+        else if (/^4/.test(number)) {
+            e.target.className = "form__input form__input--cardnumber form__input--Visa";
+        }
+
+    });
 
 
 
