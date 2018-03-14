@@ -1,5 +1,8 @@
 window.addEventListener('load', function () { 
     NodeList.prototype.each = Array.prototype.each;
+    NodeList.prototype.some = Array.prototype.some;
+
+    var breadcrumbs = document.querySelectorAll(".breadcrumbs__item");
 
     var form = document.querySelector("form");
     var submitButton = document.querySelector(".form__submit");
@@ -44,9 +47,31 @@ window.addEventListener('load', function () {
             form.querySelectorAll(".form__section").forEach(section => section.style.display = "none");
 
             button.parentNode.nextElementSibling.style.display = "block";
+            breadcrumbStep(button.parentNode.nextElementSibling);
+
         } );
         
     });
+
+    // breadcrumb
+
+    function breadcrumbStep(section) {
+
+        breadcrumbs.forEach(crumb => crumb.classList.remove("breadcrumbs__item--active", "breadcrumbs__item--before"));
+
+        var name = section.className.split("--")[1];
+
+        breadcrumbs.some(crumb => {
+            if(crumb.className.match(name)) {
+                crumb.classList.add("breadcrumbs__item--active");
+                return true;
+            }
+
+            crumb.classList.add("breadcrumbs__item--before");
+            return false;
+        });
+        
+    }
 
     // Validation
 

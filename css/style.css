@@ -16,6 +16,10 @@ body {
     /* font-family: "Helvetica Neue"; */
 }
 
+:root {
+    --purple: #74369f;
+}
+
 /* page */
 .page {
     
@@ -125,6 +129,20 @@ body {
 }
 /* cart end */
 
+/* breadcrimbs */
+.breadcrumbs__item {
+    text-decoration: none;
+    color: #979797;
+}
+
+.breadcrumbs__item--active {
+    color: var(--purple);
+}
+
+.breadcrumbs__item--before {
+    text-decoration: underline;
+}
+
 /* form */
 
 .form__section {
@@ -145,4 +163,8 @@ body {
     background-image: url("../img/mastercard.svg");
     background-position: right center;
     background-repeat: no-repeat;
+}
+
+.form__input {
+    border: 1px solid #e0dede;
 }
