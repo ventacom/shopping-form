@@ -18,6 +18,7 @@ body {
 
 :root {
     --purple: #74369f;
+    --gray: #979797;
 }
 
 /* page */
@@ -28,7 +29,7 @@ body {
 
 .page__container {
     max-width: 960px;
-    width: 80%;
+    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
@@ -36,6 +37,7 @@ body {
 
 .page__main {
     padding-top: 1.5em;
+    padding-bottom: 2em;
 }
 
 /* page end */
@@ -144,7 +146,7 @@ body {
 
 .breadcrumbs__item {
     text-decoration: none;
-    color: #979797;
+    color: var(--gray);
     padding-right: 1.6rem;
 }
 
@@ -165,8 +167,8 @@ body {
     margin-left: 0.8em;
     height: 1rem;
     width: 1rem;
-    border-top: 1px solid #979797;
-    border-right: 1px solid #979797;
+    border-top: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
     transform: rotate(45deg);
 }
 
@@ -178,6 +180,20 @@ body {
 
 .form__section--shipping {
     display: block;
+}
+
+.form__header, .form__subheader {
+    color: var(--purple);
+}
+
+.form__header {
+    margin: 0.4em 0 0 0;
+}
+
+.form__subheader {
+    font-size: 1rem;
+    padding: 1.8em 0 0.8em  0;
+    margin: 0;
 }
 
 .form__input--Visa {
@@ -194,4 +210,64 @@ body {
 
 .form__input {
     border: 1px solid #e0dede;
+    height: 3em;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding-left: 0.5em;
+}
+
+.form__input--name-shipping,
+.form__input--name-billing,
+.form__input--street-shipping,
+.form__input--street-billing {
+    margin-bottom: 0.8em;
+}
+
+.form__input--city-shipping,
+.form__input--city-billing {
+    margin: 1.5em 0;
+}
+
+.form__input--phone, .form__input--country-shipping, 
+.form__input--country-billing {
+    width: 50%;
+    float: left;
+    /* margin-right: 10%; */
+}
+
+.form__input--zip-shipping, 
+.form__input--zip-billing {
+    width: 40%;
+    float: right;
+}
+
+.form__note {
+    float: left;
+    margin-left: 5%;
+    width: 30%;
+    font-size: 80%;
+    color: var(--gray);
+}
+
+.form__button {
+    margin-top: 1.5em;
+    height: 3em; 
+    width: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: block;
+    color: white;
+    background-color: var(--purple);
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.clearfix {
+    clear: both;
+    display: table;
+    content: "";
+    height: 0;
 }
