@@ -15,15 +15,19 @@ window.addEventListener('load', function () {
 
 
     submitButton.addEventListener('click', (event) => {
-        var errors = 0;
-        fields.forEach((el) => {
-            if (!el.validity.valid) {
-                errors++
-                checkValidity(el);
+
+        var errors = inputs.some((el) => {
+            checkValidity(el)
+            return !el.validity.valid
+        });
+
+        inputs.forEach( el => {
+            if(!el.validity.valid) {
+                el.classList.add("form__input--error-background");
             }
         });
 
-        if (errors > 0) {
+        if (errors) {
             return
         }
         form.submit();
@@ -34,15 +38,19 @@ window.addEventListener('load', function () {
     continueButtons.forEach(button => {
         button.addEventListener('click', (e) => {
             var inputs = button.parentNode.querySelectorAll(".form__input");
-            var errors = 0;
-            inputs.forEach((el) => {
-                if (!el.validity.valid) {
-                    errors++
-                    if (errors == 1) checkValidity(el);
+
+            var errors = inputs.some((el) => {
+                checkValidity(el)
+                return !el.validity.valid
+            });
+
+            inputs.forEach( el => {
+                if(!el.validity.valid) {
+                    el.classList.add("form__input--error-background");
                 }
             });
 
-            if (errors > 0) {
+            if (errors) {
                 return
             }
 
@@ -116,6 +124,12 @@ window.addEventListener('load', function () {
         if (field.previousElementSibling.classList.contains("error")) {
             field.previousElementSibling.innerHTML = '';
             field.previousElementSibling.classList.remove("active");
+            field.classList.remove("form__input--error-background");
+            field.classList.remove("form__input--error-shadow");
+        }
+
+        if(!field.validity.valid) {
+            field.classList.add("form__input--error-shadow");
         }
 
         if (field.validity.typeMismatch && field.name == "email") {
