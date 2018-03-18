@@ -13,6 +13,8 @@ window.addEventListener('load', function () {
 
     var sameAsShipping = document.querySelector(".form__same-as-shipping");
 
+    var geolocation =  document.querySelector(".geolocation");
+
 
     submitButton.addEventListener('click', (event) => {
 
@@ -241,6 +243,24 @@ window.addEventListener('load', function () {
 
     });
 
+    // geolocation 
+
+    (function detectGeolocation() {
+        if (navigator.geolocation) {
+
+            geolocation.addEventListener('click', getLocation)
+            
+
+        } else {
+            geolocation.style.display = "none";
+        }
+    })();
+
+    function getLocation(e) {
+        navigator.geolocation.getCurrentPosition( (position) => {
+            e.target.previousElementSibling.value = `latitude: ${position.coords.latitude} Longitude: ${position.coords.longitude}`;
+        });
+    }
 
 
 });
