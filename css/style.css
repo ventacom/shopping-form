@@ -208,7 +208,7 @@ body {
     background-repeat: no-repeat;
 }
 
-.form__input {
+.field__input {
     border: 1px solid var(--gray);
     height: 3rem;
     border-radius: 5px;
@@ -217,11 +217,11 @@ body {
     padding-left: 0.5em;
 }
 
-.form__input--error-shadow {
+.field__input--error-shadow {
     box-shadow: 0 -0.2em 0.2em var(--gray);
 }
 
-.form__input--error-background {
+.field__input--error-background {
     background-color: rgb(228, 228, 100);
 }
 
@@ -253,45 +253,41 @@ body {
 
 }
 
-/* form end */
-
-/* wrapper */ 
-
-.wrapper {
-    position: relative;
-}
-
-.wrapper__name-shipping,
-.wrapper__name-billing,
-.wrapper__street-shipping,
-.wrapper__street-billing {
+.form__field--name-shipping,
+.form__field--name-billing,
+.form__field--street-shipping,
+.form__field--street-billing {
     margin-bottom: 0.8em;
 }
 
-.wrapper__city-shipping,
-.wrapper__city-billing {
+.form__field--city-shipping,
+.form__field--city-billing {
     margin: 1.5em 0;
 }
 
-.wrapper__phone, .wrapper__country-shipping, 
-.wrapper__country-billing {
+.form__field--phone, .form__field--country-shipping, 
+.form__field--country-billing {
     width: 50%;
     display: inline-block;
 
 }
 
-.wrapper__zip-shipping,
-.wrapper__zip-billing {
+.form__field--zip-shipping,
+.form__field--zip-billing {
     width: 40%;
     display: inline-block;
     margin-left: 10%;
 }
-/* wrapper end */
 
 
-/* error */
+/* form end */
+/* field */
 
-.error {
+.field {
+    position: relative;
+}
+
+.field__error {
     display: inline-block;
     margin-left: -0.6em;
     color: red;
@@ -300,7 +296,7 @@ body {
     bottom: 3.3rem;
 }
 
-.active {
+.field__error--active {
     border: 1px solid var(--gray);
     border-radius: 5px;
     padding: 0.5em 0.5em;
@@ -308,7 +304,7 @@ body {
     box-shadow: 0 0 0.6em var(--gray);
 }
 
-.active::after {
+.field__error--active::after {
     content: '';
     display: block;
     width: 0.8em;
@@ -324,7 +320,7 @@ body {
 
 }
 
-/* error end */
+/* field end */
 
 /* geolocation */
 .geolocation {

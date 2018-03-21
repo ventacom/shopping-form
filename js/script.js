@@ -7,9 +7,9 @@ window.addEventListener('load', function () {
     var form = document.querySelector("form");
     var submitButton = document.querySelector(".form__submit");
     var continueButtons = document.querySelectorAll(".form__button--continue");
-    var cardNumber = document.querySelector(".form__input--cardnumber");
+    var cardNumber = document.querySelector(".field__input--cardnumber");
 
-    var fields = form.querySelectorAll('.form__input');
+    var inputs = form.querySelectorAll('.field__input');
 
     var sameAsShipping = document.querySelector(".form__same-as-shipping");
 
@@ -25,7 +25,7 @@ window.addEventListener('load', function () {
 
         inputs.forEach( el => {
             if(!el.validity.valid) {
-                el.classList.add("form__input--error-background");
+                el.classList.add("field__input--error-background");
             }
         });
 
@@ -39,7 +39,7 @@ window.addEventListener('load', function () {
 
     continueButtons.forEach(button => {
         button.addEventListener('click', (e) => {
-            var inputs = button.parentNode.querySelectorAll(".form__input");
+            var inputs = button.parentNode.querySelectorAll(".field__input");
 
             var errors = inputs.some((el) => {
                 checkValidity(el)
@@ -48,7 +48,7 @@ window.addEventListener('load', function () {
 
             inputs.forEach( el => {
                 if(!el.validity.valid) {
-                    el.classList.add("form__input--error-background");
+                    el.classList.add("field__input--error-background");
                 }
             });
 
@@ -88,21 +88,21 @@ window.addEventListener('load', function () {
     //same as shipping 
 
     sameAsShipping.addEventListener('click', (e) => {
-        var shippingFields = document.querySelectorAll(`.form__input--name-shipping, 
-                                                       .form__input--street-shipping, 
-                                                       .form__input--apt-shipping,
-                                                       .form__input--city-shipping,
-                                                       .form__input--city-shipping,
-                                                       .form__input--country-shipping,
-                                                       .form__input--zip-shipping`);
+        var shippingFields = document.querySelectorAll(`.field__input--name-shipping, 
+                                                       .field__input--street-shipping, 
+                                                       .field__input--apt-shipping,
+                                                       .field__input--city-shipping,
+                                                       .field__input--city-shipping,
+                                                       .field__input--country-shipping,
+                                                       .field__input--zip-shipping`);
 
-        var billingFields = document.querySelectorAll(`.form__input--name-billing, 
-                                                        .form__input--street-billing, 
-                                                        .form__input--apt-billing,
-                                                        .form__input--city-billing,
-                                                        .form__input--city-billing,
-                                                        .form__input--country-billing,
-                                                        .form__input--zip-billing`);
+        var billingFields = document.querySelectorAll(`.field__input--name-billing, 
+                                                        .field__input--street-billing, 
+                                                        .field__input--apt-billing,
+                                                        .field__input--city-billing,
+                                                        .field__input--city-billing,
+                                                        .field__input--country-billing,
+                                                        .field__input--zip-billing`);
 
         shippingFields.forEach( (field, index) => { billingFields[index].value = field.value } );
     });
@@ -110,7 +110,7 @@ window.addEventListener('load', function () {
 
     // Validation
 
-    fields.forEach(el => {
+    inputs.forEach(el => {
 
         el.addEventListener('keydown', (event) => {
             if (event.which == 13) event.preventDefault();
@@ -123,15 +123,15 @@ window.addEventListener('load', function () {
 
     function checkValidity(field) {
 
-        if (field.previousElementSibling.classList.contains("error")) {
+        if (field.previousElementSibling.classList.contains("field__error")) {
             field.previousElementSibling.innerHTML = '';
-            field.previousElementSibling.classList.remove("active");
-            field.classList.remove("form__input--error-background");
-            field.classList.remove("form__input--error-shadow");
+            field.previousElementSibling.classList.remove("field__error--active");
+            field.classList.remove("field__input--error-background");
+            field.classList.remove("field__input--error-shadow");
         }
 
         if(!field.validity.valid) {
-            field.classList.add("form__input--error-shadow");
+            field.classList.add("field__input--error-shadow");
         }
 
         if (field.validity.typeMismatch && field.name == "email") {
@@ -218,7 +218,7 @@ window.addEventListener('load', function () {
 
     function showError(field, message) {
         var error = field.previousElementSibling;
-        error.classList.add("active");
+        error.classList.add("field__error--active");
         error.innerHTML = message;
     }
 
@@ -230,15 +230,15 @@ window.addEventListener('load', function () {
         number = number.split(" ").join("");
 
         if (/^(5[1-5][0-9]{14}|2(22[1-9][0-9]{12}|2[3-9][0-9]{13}|[3-6][0-9]{14}|7[0-1][0-9]{13}|720[0-9]{12}))$/.test(number)) {
-            e.target.className = "form__input form__input--cardnumber form__input--Mastercard";
+            e.target.className = "field__input field__input--cardnumber field__input--Mastercard";
         }
 
         else if (/^4/.test(number)) {
-            e.target.className = "form__input form__input--cardnumber form__input--Visa";
+            e.target.className = "field__input field__input--cardnumber field__input--Visa";
         }
 
         else {
-            e.target.className = "form__input form__input--cardnumber";
+            e.target.className = "field__input field__input--cardnumber";
         }
 
     });
