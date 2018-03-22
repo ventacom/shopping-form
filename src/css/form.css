@@ -102,3 +102,15 @@
     display: inline-block;
     margin-left: 10%;
 }
+
+@media (min-width: 32em) {
+    .form {
+        width: 28em;
+        background-color: white;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1.5em 2em 2.3em 2em;
+        border: 1px solid var(--gray);
+    }
+
+}
