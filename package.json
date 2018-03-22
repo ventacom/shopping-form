@@ -21,6 +21,9 @@
   },
   "homepage": "https://github.com/Shayol/shopping-form#readme",
   "devDependencies": {
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
+    "url-loader": "^1.0.1",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13"
   }

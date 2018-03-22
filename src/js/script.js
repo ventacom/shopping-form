@@ -1,3 +1,5 @@
+require('../css/main.css');
+
 window.addEventListener('load', function () {
     NodeList.prototype.each = Array.prototype.each;
     NodeList.prototype.some = Array.prototype.some;
