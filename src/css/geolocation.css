@@ -1,0 +1,10 @@
+.geolocation {
+    display: inline-block;
+    position: absolute;
+    background: url('../img/geolocation.png') no-repeat 50% 50%;
+    width: 2em;
+    height: 2em;
+    right: 0.5em;
+    top: 0.5em;
+    cursor: pointer;
+}

@@ -1,0 +1,29 @@
+.combined-shape {
+    margin-right: 0.5em; 
+    width: 1.6em; 
+    position: relative;
+}
+
+.combined-shape__line {
+    display: inline-block;
+    width: 1px;
+    height: 2.25em;
+    background-color: #d135aa;
+    transform: rotate(35deg) translateX(0.9em);
+}
+
+.combined-shape::before {
+    content: "\003c";
+}
+
+.combined-shape::after {
+    content: "\003e";
+    right: 0%;
+}
+
+.combined-shape::before, .combined-shape::after {
+    color: #d135aa;
+    font-size: 1em;
+    position: absolute;
+    top: 30%;
+}

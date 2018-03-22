@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("../fonts/HelveticaNeue.ttf") format("truetype");
+    font-weight:normal;
+    font-style:normal;
+}
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    /* font-family: "Helvetica Neue"; */
+}
+
+:root {
+    --purple: #74369f;
+    --gray: #e0dede;
+}

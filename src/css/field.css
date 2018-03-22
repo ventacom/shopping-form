@@ -1,0 +1,36 @@
+.field {
+    position: relative;
+}
+
+.field__error {
+    display: inline-block;
+    margin-left: -0.6em;
+    color: red;
+    font-size: 75%;
+    position: absolute;
+    bottom: 3.3rem;
+}
+
+.field__error--active {
+    border: 1px solid var(--gray);
+    border-radius: 5px;
+    padding: 0.5em 0.5em;
+    background-color: white;
+    box-shadow: 0 0 0.6em var(--gray);
+}
+
+.field__error--active::after {
+    content: '';
+    display: block;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    z-index: 2;
+    top: 100%;
+    left: 1.5em;
+    border-bottom: 1px solid var(--gray);
+    border-right: 1px solid var(--gray);
+    transform: rotate(45deg) translateY(-50%);
+    background-color: white;
+
+}

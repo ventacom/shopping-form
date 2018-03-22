@@ -1,0 +1,104 @@
+.form__section {
+    display: none;
+}
+
+.form__section--shipping {
+    display: block;
+}
+
+.form__header, .form__subheader {
+    color: var(--purple);
+}
+
+.form__header {
+    margin: 0.4em 0 0 0;
+}
+
+.form__subheader {
+    font-size: 1rem;
+    padding: 1.8em 0 0.8em  0;
+    margin: 0;
+}
+
+.form__input--Visa {
+    background-image: url("../img/visa.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.form__input--Mastercard {
+    background-image: url("../img/mastercard.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.field__input {
+    border: 1px solid var(--gray);
+    height: 3rem;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding-left: 0.5em;
+}
+
+.field__input--error-shadow {
+    box-shadow: 0 -0.2em 0.2em var(--gray);
+}
+
+.field__input--error-background {
+    background-color: rgb(228, 228, 100);
+}
+
+.form__input--zip-shipping, 
+.form__input--zip-billing {
+    width: 100%;
+}
+
+.form__note {
+    margin-left: 5%;
+    width: 25%;
+    font-size: 80%;
+    color: var(--gray);
+    display: inline-block;
+}
+
+.form__button {
+    margin-top: 1.5em;
+    height: 3em; 
+    width: 50%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: block;
+    color: white;
+    background-color: var(--purple);
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+
+}
+
+.form__field--name-shipping,
+.form__field--name-billing,
+.form__field--street-shipping,
+.form__field--street-billing {
+    margin-bottom: 0.8em;
+}
+
+.form__field--city-shipping,
+.form__field--city-billing {
+    margin: 1.5em 0;
+}
+
+.form__field--phone, .form__field--country-shipping, 
+.form__field--country-billing {
+    width: 50%;
+    display: inline-block;
+
+}
+
+.form__field--zip-shipping,
+.form__field--zip-billing {
+    width: 40%;
+    display: inline-block;
+    margin-left: 10%;
+}
