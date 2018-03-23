@@ -72,7 +72,7 @@
 .form__secure-payment {
     font-size: 90%;
     color: grey;
-    margin-top: 1em 0 1em 1.5em;
+    margin: 1em 0 1em 1.5em;
 }
 
 @media (min-width: 32em) {

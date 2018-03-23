@@ -4,7 +4,7 @@
     margin-left: auto;
     position: relative;
     width: 4.5em;
-    line-height: 2.4em;
+    line-height: 2.2em;
     color: #ff2b81;
     font-size: 0.9em;
 }
@@ -21,17 +21,17 @@
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 2;
 }
 
-.cart__amount::after {
+.cart::after {
     content: "";
-    z-index: -1;
     display: block;
     position: absolute;
-    top: 50%;
+    top: 30%;
     right: 0%;
     height: 1.5em;
-    width:2.5em;
+    width: 2em;
     background-image: url('../img/cart.png');
     background-repeat: no-repeat;
 }
