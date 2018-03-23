@@ -14,3 +14,11 @@
     padding-top: 1.5em;
     padding-bottom: 2em;
 }
+
+@media (min-width: 32em) {
+
+    .page__main {
+        margin-top: 3em;
+    }
+    
+}

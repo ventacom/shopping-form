@@ -59,14 +59,14 @@
                         </div>
                         <div class="form__field field form__field--country-shipping">
                             <div class="field__error"></div>
-                            <input type="text" list="countries" name="country-shipping" class="field__input form__select field__input--country-shipping" required>
+                            <input type="text" list="countries" placeholder="Country" name="country-shipping" class="field__input field__input--country-shipping" required>
                                <datalist id="countries">
-                                <option value="United States">United States 
-                                <option value="United Kingdom">United Kingdom 
-                                <option value="Afghanistan">Afghanistan 
-                                <option value="Albania">Albania 
-                                <option value="Algeria">Algeria 
-                                <option value="American Samoa">American Samoa 
+                                <option value="United States">
+                                <option value="United Kingdom">
+                                <option value="Afghanistan">
+                                <option value="Albania">
+                                <option value="Algeria">
+                                <option value="American Samoa">
                                 <option value="Andorra">Andorra 
                                 <option value="Angola">Angola 
                                 <option value="Anguilla">Anguilla 
@@ -333,8 +333,8 @@
                         </div>
                         <div class="form__field field form__field--country-billing">
                             <div class="field__error"></div>
-                            <select name="country-billing" class="field__input form__select field__input--country-billing" required>
-                                <option disabled selected value>Country 
+                            <input type="text" list="billing-countries" name="country-billing" class="field__input field__input--country-billing" required>
+                                <datalist id="billing-countries">
                                 <option value="United States">United States 
                                 <option value="United Kingdom">United Kingdom 
                                 <option value="Afghanistan">Afghanistan 
@@ -576,7 +576,7 @@
                                 <option value="Yemen">Yemen 
                                 <option value="Zambia">Zambia 
                                 <option value="Zimbabwe">Zimbabwe 
-                            </select>
+                                </datalist>
                         </div><div class="form__field field form__field--zip-billing">
                             <div class="field__error"></div>
                             <input type="text" placeholder="ZIP" name="zip-billing" class="field__input field__input--zip-billing" required>
@@ -584,7 +584,7 @@
                         <a href="#" class="form__button form__button--continue">Continue</a>
                     </div>
                     <div class="form__section form__section--payment">
-                        <div class="form__header">Payment</div>
+                        <h1 class="form__header">Payment</h1>
                         <div class="form__secure-payment">This is a secure 128-bit SSL encrypted payment</div>
                         <h2 class="form__subheader">Cardholder Name</h2>
                         <div class="form__field field form__field--card-holder-name">

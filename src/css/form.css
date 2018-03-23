@@ -20,40 +20,6 @@
     margin: 0;
 }
 
-.form__input--Visa {
-    background-image: url("../img/visa.svg");
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-
-.form__input--Mastercard {
-    background-image: url("../img/mastercard.svg");
-    background-position: right center;
-    background-repeat: no-repeat;
-}
-
-.field__input {
-    border: 1px solid var(--gray);
-    height: 3rem;
-    border-radius: 5px;
-    display: block;
-    width: 100%;
-    padding-left: 0.5em;
-}
-
-.field__input--error-shadow {
-    box-shadow: 0 -0.2em 0.2em var(--gray);
-}
-
-.field__input--error-background {
-    background-color: rgb(228, 228, 100);
-}
-
-.form__input--zip-shipping, 
-.form__input--zip-billing {
-    width: 100%;
-}
-
 .form__note {
     margin-left: 5%;
     width: 25%;
@@ -103,6 +69,12 @@
     margin-left: 10%;
 }
 
+.form__secure-payment {
+    font-size: 90%;
+    color: grey;
+    margin-top: 1em 0 1em 1.5em;
+}
+
 @media (min-width: 32em) {
     .form {
         width: 28em;
@@ -111,6 +83,8 @@
         margin-right: auto;
         padding: 1.5em 2em 2.3em 2em;
         border: 1px solid var(--gray);
+        border-radius: 5px;
+        box-shadow: 0 0 18px var(--gray);
     }
 
 }

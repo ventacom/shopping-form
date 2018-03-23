@@ -1,6 +1,7 @@
 .header {
     padding: 1.25em 0;
     border-bottom: 1px solid #eeb6e5;
+    background-color: white;
 }
 
 .header__container {
@@ -9,7 +10,7 @@
     height: 100%;
 }
 
-.test-task {
+.header__test-task {
     color: #5a1094;
     font-family: inherit;
 }

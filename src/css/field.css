@@ -2,6 +2,40 @@
     position: relative;
 }
 
+.field__input--Visa {
+    background-image: url("../img/visa.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.field__input--Mastercard {
+    background-image: url("../img/mastercard.svg");
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.field__input--country-shipping, .field__input--country-billing {
+
+}
+
+.field__input {
+    border: 1px solid var(--gray);
+    height: 3rem;
+    border-radius: 5px;
+    display: block;
+    width: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.2em;
+}
+
+.field__input--error-shadow {
+    box-shadow: 0 -0.2em 0.2em var(--gray);
+}
+
+.field__input--error-background {
+    background-color: rgb(228, 228, 100);
+}
+
 .field__error {
     display: inline-block;
     margin-left: -0.6em;

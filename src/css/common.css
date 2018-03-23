@@ -19,4 +19,5 @@ body {
 :root {
     --purple: #74369f;
     --gray: #e0dede;
+    --wide: 32em;
 }
