@@ -1,29 +1,33 @@
 .combined-shape {
     margin-right: 0.5em; 
-    width: 1.6em; 
+    width: 2em; 
+    height: 2.25em;
     position: relative;
+    text-align: center;
 }
 
 .combined-shape__line {
     display: inline-block;
     width: 1px;
-    height: 2.25em;
+    height: 100%;
     background-color: #d135aa;
-    transform: rotate(35deg) translateX(0.9em);
+    transform: rotate(45deg);
 }
 
 .combined-shape::before {
     content: "\003c";
+    left: 0;
 }
 
 .combined-shape::after {
     content: "\003e";
-    right: 0%;
+    right: 0;
 }
 
 .combined-shape::before, .combined-shape::after {
     color: #d135aa;
     font-size: 1em;
     position: absolute;
-    top: 30%;
+    top: 50%;
+    transform: translateY(-50%);
 }
