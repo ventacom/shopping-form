@@ -1,9 +1,7 @@
 .cart {
     display: block;
     text-decoration: none;
-    margin-left: auto;
     position: relative;
-    width: 4.5em;
     line-height: 2.2em;
     color: #ff2b81;
     font-size: 0.9em;
