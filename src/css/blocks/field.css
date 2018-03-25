@@ -3,13 +3,13 @@
 }
 
 .field__input--Visa {
-    background-image: url("../img/visa.svg");
+    background-image: url("../../img/visa.svg");
     background-position: right center;
     background-repeat: no-repeat;
 }
 
 .field__input--Mastercard {
-    background-image: url("../img/mastercard.svg");
+    background-image: url("../../img/mastercard.svg");
     background-position: right center;
     background-repeat: no-repeat;
 }
