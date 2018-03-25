@@ -13,7 +13,7 @@
 .header__test-task {
     color: #5a1094;
     font-family: inherit;
-    flex-shrink: 2;
+    /* flex-shrink: 2; */
 }
 
 .header__cart {

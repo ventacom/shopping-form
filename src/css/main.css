@@ -1,9 +1,9 @@
 @import url("common.css");
-@import url("page.css");
-@import url("header.css");
-@import url("combined-shape.css");
-@import url("cart.css");
-@import url("breadcrumbs.css");
-@import url("form.css");
-@import url("field.css");
-@import url("geolocation.css");
+@import url("blocks/page.css");
+@import url("blocks/header.css");
+@import url("blocks/combined-shape.css");
+@import url("blocks/cart.css");
+@import url("blocks/breadcrumbs.css");
+@import url("blocks/form.css");
+@import url("blocks/field.css");
+@import url("blocks/geolocation.css");

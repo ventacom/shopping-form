@@ -11,13 +11,12 @@
 }
 
 .form__header {
-    margin: 0.4em 0 0 0;
+    margin: 0.8em 0 0 0;
 }
 
 .form__subheader {
     font-size: 1rem;
-    padding: 1.8em 0 0.8em  0;
-    margin: 0;
+    margin: 1em 0 0.8em 0;
 }
 
 .form__note {
@@ -31,8 +30,8 @@
 .form__button {
     margin-top: 1.5em;
     width: 50%;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 0.9em;
+    padding-bottom: 0.9em;
     display: block;
     color: white;
     background-color: var(--purple);
@@ -84,6 +83,10 @@
         border: 1px solid var(--gray);
         border-radius: 5px;
         box-shadow: 0 0 18px var(--gray);
+    }
+
+    .form__subheader {
+        margin-top: 1.6em;
     }
 
 }
