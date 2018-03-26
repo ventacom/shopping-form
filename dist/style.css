@@ -269,10 +269,6 @@ body {
     background-repeat: no-repeat;
 }
 
-/* .field__input--country-shipping, .field__input--country-billing {
-
-} */
-
 .field__input {
     border: 1px solid var(--gray);
     height: 2.8rem;
@@ -328,7 +324,7 @@ body {
     background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAMAAAC6V+0/AAAAAXNSR0IB2cksfwAAAEJQTFRFAAAAY/e1GolgkUS0bjKHYyt6K4mBbjGHXyt0Yix4eziWZS18QYKCtU/Y5GwY6It0dTWQfjiYJnGzlKWlSZycZC16TAYb5QAAABZ0Uk5TAB9FhK7DQbDMxqDAP25VC6WcGx87wg0z2dkAAACISURBVHicbZFZDsMgDESHLRgc1tD7XzVka9XW82PrSWObATiktLHOWaMV3lo8hcgcA/nlRmsizgW1omSmtJ4wUeuzTAj0Run0UtvwQGyN5gTlueMD0dkraMrX6DGumknDhIIvlWBgI34ULRzXqds6jp6dBF+yXVwkniQeLz5TDkSOTgwZf9+xA9w2CF1Z/Vy/AAAAAElFTkSuQmCC) no-repeat 50% 50%;
     width: 2em;
     height: 2em;
-    right: 0.5em;
-    top: 0.5em;
+    right: 0.4em;
+    top: 0.4em;
     cursor: pointer;
 }

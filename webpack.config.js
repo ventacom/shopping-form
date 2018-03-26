@@ -1,9 +1,11 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require("path");
+const webpack = require('webpack');
 
 module.exports = {
     entry: './src/js/main.js',
     output: {
-      path: __dirname + '/dist',
+      path: path.resolve(__dirname, 'dist'),
       filename: 'script.js'
     },
     module: {
@@ -23,7 +25,19 @@ module.exports = {
         }
       ]
     },
+    devServer: {
+      watchOptions: {
+        // Delay the rebuild after the first change
+        aggregateTimeout: 300,
+  
+        // Poll using interval (in ms, accepts boolean too)
+        poll: 1000,
+      },
+    },
     plugins: [
-      new ExtractTextPlugin('style.css')
+      new ExtractTextPlugin('style.css'),
+      new webpack.WatchIgnorePlugin([
+        path.join(__dirname, "node_modules")
+      ])
     ]
   };

@@ -14,10 +14,6 @@
     background-repeat: no-repeat;
 }
 
-/* .field__input--country-shipping, .field__input--country-billing {
-
-} */
-
 .field__input {
     border: 1px solid var(--gray);
     height: 2.8rem;
