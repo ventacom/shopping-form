@@ -1,5 +1,5 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
-const webpack = require('webpack');
+const LiveReloadPlugin = require('webpack-livereload-plugin');
 
 module.exports = {
     entry: './src/js/main.js',
@@ -24,10 +24,8 @@ module.exports = {
         }
       ]
     },
-    devServer: {
-      overlay: true
-    },
     plugins: [
-      new ExtractTextPlugin('style.css')
+      new ExtractTextPlugin('style.css'),
+      new LiveReloadPlugin()
     ]
   };

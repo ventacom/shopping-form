@@ -13,7 +13,7 @@
 body {
     padding: 0;
     margin: 0;
-    /* font-family: "Helvetica Neue"; */
+    background-color: rgb(208, 211, 223);
 }
 
 :root {
