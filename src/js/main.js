@@ -1,4 +1,4 @@
-require('../css/main.css');
+// require('../css/main.css');
 
 window.addEventListener('load', function () {
     NodeList.prototype.each = Array.prototype.each;
@@ -87,7 +87,7 @@ window.addEventListener('load', function () {
 
     }
 
-    //same as shipping 
+    //same as shipping
 
     sameAsShipping.addEventListener('click', (e) => {
         var shippingFields = document.querySelectorAll(`.field__input--name-shipping, 
@@ -245,13 +245,13 @@ window.addEventListener('load', function () {
 
     });
 
-    // geolocation 
+    // geolocation
 
     (function detectGeolocation() {
         if (navigator.geolocation) {
 
             geolocation.addEventListener('click', getLocation)
-            
+
 
         } else {
             geolocation.style.display = "none";

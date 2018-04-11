@@ -12,11 +12,13 @@
 
 .form__header {
     margin: 0.8em 0 0 0;
+    font-weight: 200;
 }
 
 .form__subheader {
     font-size: 1rem;
     margin: 1em 0 0.8em 0;
+    font-weight: 200;
 }
 
 .form__note {
@@ -38,6 +40,7 @@
     border-radius: 5px;
     text-decoration: none;
     text-align: center;
+    font-weight: 300;
 
 }
 
@@ -53,7 +56,7 @@
     margin: 1.5em 0;
 }
 
-.form__field--phone, .form__field--country-shipping, 
+.form__field--phone, .form__field--country-shipping,
 .form__field--country-billing {
     width: 50%;
     display: inline-block;

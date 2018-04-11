@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+
+<body>
+<div class="page">
+    <% var data = {
+        title: "Заголовок | Проект",
+        author: "Ludmila",
+        images : {
+            cart: require('./../../img/cart.png')
+        }
+    }; %>
+
+    <%= _.template(require('./../includes/header.html'))(data) %>
+
+    <div class="page__main">
+        <div class="page__container">
+            <%= _.template(require('./../includes/form.html'))(data) %>
+        </div>
+    </div>
+
+    <%= _.template(require('./../includes/footer.html'))(data) %>
+
+</div>
+</body>
+</html>

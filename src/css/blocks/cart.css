@@ -8,13 +8,15 @@
 }
 .cart__amount {
     display: inline-block;
-    line-height: 1em;
+    line-height: 0.75em;
     text-align: center;
-    width: 1.2em;
-    height: 1.2em;
+    width: 1.4em;
+    height: 1.4em;
     border-radius: 50%;
     background-color: #ff2b81;
-    font-size: 0.9em;
+    padding-top: 0.4em;
+    font-size: 0.75em;
+    font-weight: 300;
     color: white;
     position: absolute;
     top: 0;

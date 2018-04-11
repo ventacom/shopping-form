@@ -1,10 +1,31 @@
 @font-face {
+    font-weight: normal;
     font-family: "Helvetica Neue";
-    src: url("../fonts/HelveticaNeue.ttf") format("truetype");
-    font-weight:normal;
-    font-style:normal;
+    font-style: normal;
+    src: url("../fonts/helveticaneue.woff2") format("woff2"),
+         url("../fonts/helveticaneue.woff") format("woff");
 }
-
+@font-face {
+    font-weight: bold;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    src: url("../fonts/helvetica_neu_bold.woff2") format("woff2"),
+         url("../fonts/helvetica_neu_bold.woff") format("woff");
+}
+@font-face {
+    font-weight: 200;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    src: url("../fonts/helveticaneue_light.woff2") format("woff2"),
+         url("../fonts/helveticaneue_light.woff") format("woff");
+}
+@font-face {
+    font-weight: 300;
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    src: url("../fonts/helveticaneue_medium.woff2") format("woff2"),
+         url("../fonts/helveticaneue_medium.woff") format("woff");
+}
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -13,7 +34,14 @@
 body {
     padding: 0;
     margin: 0;
+
     background-color: rgb(208, 211, 223);
+
+    font-family: "Helvetica Neue","Arial", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 16px;
+
 }
 
 :root {
